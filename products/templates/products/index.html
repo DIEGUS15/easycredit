@@ -1,0 +1,9 @@
+{% if products %}
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - {{ product.description }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No products are available.</p>
+{% endif %}

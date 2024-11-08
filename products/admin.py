@@ -1,10 +1,17 @@
 from django.contrib import admin
-from .models import ProductType, Product
+from .models import ProductType, Product, Provider
 
 
 # PRODUCTTYPE MODEL
 @admin.register(ProductType)
 class ProductTypeAdmin(admin.ModelAdmin):
+    list_display = ['name', 'status']
+    search_fields = ['name']
+
+
+# PROVIDER MODEL
+@admin.register(Provider)
+class ProviderAdmin(admin.ModelAdmin):
     list_display = ['name', 'status']
     search_fields = ['name']
 
